@@ -181,6 +181,37 @@ window.SITE = {
   },
 
   /* ----------------------------------------------------------
+     KLIEN KAMI
+     Logo diambil dari sumber resmi masing-masing (situs
+     perusahaan / laman investor). Beberapa nama PT di bawah
+     satu logo karena mereka adalah entitas berbeda dalam grup
+     usaha yang sama dan tidak memakai logo tersendiri — di
+     media sosial resmi mereka pun selalu tampil dengan nama
+     grup usahanya.
+     ---------------------------------------------------------- */
+  klien: [
+    {
+      logo: 'mayora-group.png',
+      nama: 'Mayora Group',
+      entitas: [
+        'PT. Mayora Indah Tbk',
+        'PT. Dellifood Sentosa Corpindo',
+        'PT. Kakao Mas Gemilang',
+        'PT. Pascal Corpindo Semesta',
+        'PT. Inbisco Niagatama Semesta'
+      ]
+    },
+    {
+      logo: 'torabika.png',
+      nama: 'PT. Torabika Eka Semesta'
+    },
+    {
+      logo: 'tumbakmas-niagasakti.png',
+      nama: 'PT. Tumbakmas Niagasakti'
+    }
+  ],
+
+  /* ----------------------------------------------------------
      KEUNGGULAN — mengikuti ikon di brand guide
      ---------------------------------------------------------- */
   keunggulan: [

@@ -305,6 +305,31 @@
     fill('layanan', S.layanan.map(kartu).join(''));
   }
 
+  function renderKlien() {
+    if (!S.klien) return;
+
+    fill(
+      'klien',
+      S.klien
+        .map(function (k, i) {
+          var detail = k.entitas
+            ? '<p class="klien__detail">' + k.entitas.map(esc).join(' &middot; ') + '</p>'
+            : '';
+          return (
+            '<div class="glass klien__card" data-reveal="up" style="--reveal-delay:' + i * 0.08 + 's">' +
+            '<div class="klien__logo-wrap">' +
+            '<img class="klien__logo" src="assets/img/klien/' + esc(k.logo) + '" ' +
+            'alt="Logo ' + esc(k.nama) + '" loading="lazy">' +
+            '</div>' +
+            '<h3 class="klien__nama">' + esc(k.nama) + '</h3>' +
+            detail +
+            '</div>'
+          );
+        })
+        .join('')
+    );
+  }
+
   function renderKeunggulan() {
     fill(
       'keunggulan',
@@ -531,6 +556,7 @@
     renderWa();
     renderStatistik();
     renderLayanan();
+    renderKlien();
     renderKeunggulan();
     renderCaraKerja();
     renderMisi();
