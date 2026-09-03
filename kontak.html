@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontak — PT. Zenith Trans Ekspedisi</title>
+<meta name="description" content="Hubungi PT. Zenith Trans Ekspedisi untuk permintaan penawaran pengiriman. Isi formulir, penawaran kami kirim dalam 24 jam.">
+<meta name="theme-color" content="#0b1017">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:title" content="Kontak — PT. Zenith Trans Ekspedisi">
+<meta property="og:description" content="Minta penawaran pengiriman. Kami balas dalam 24 jam.">
+<meta property="og:image" content="assets/img/logo-zenith.png">
+
+<link rel="icon" href="assets/img/logo-mark.png" type="image/png">
+<link rel="canonical" href="kontak.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,600;0,700;0,800;1,700;1,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+
+<script src="assets/js/theme.js"></script>
+</head>
+
+<body>
+<a class="skip-link" href="#konten">Lompat ke konten utama</a>
+
+<div class="aurora" aria-hidden="true">
+  <div class="aurora__blob aurora__blob--1"></div>
+  <div class="aurora__blob aurora__blob--2"></div>
+  <div class="aurora__blob aurora__blob--3"></div>
+  <div class="aurora__grid"></div>
+</div>
+
+<div data-render="nav"></div>
+
+<main id="konten">
+
+  <header class="page-head container">
+    <span class="eyebrow" data-reveal="up">Hubungi Kami</span>
+    <h1 data-reveal="up" style="--reveal-delay:.08s">
+      Kirim detail, terima <span class="text-gradient">penawaran</span>
+    </h1>
+    <p class="lead" data-reveal="up" style="--reveal-delay:.16s">
+      Isi formulir di bawah ini. Ringkasan permintaan Anda akan terbuka langsung
+      di WhatsApp, tinggal tekan kirim.
+    </p>
+  </header>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="contact">
+
+        <!-- ---------- kartu kontak ---------- -->
+        <div class="contact__cards" data-reveal="right">
+
+          <div class="glass contact__card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.5s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11Z"/><circle cx="12" cy="10.5" r="2.7"/></svg>
+            <div>
+              <h4>Alamat Kantor</h4>
+              <address>
+                <span data-site="kontak.alamat"></span><br>
+                <span data-site="kontak.kelurahan"></span><br>
+                <span data-site="kontak.kota"></span>,
+                <span data-site="kontak.provinsi"></span>
+                <span data-site="kontak.kodePos"></span>
+              </address>
+            </div>
+          </div>
+
+          <div class="glass contact__card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.3 3h3l1.5 4-2 1.4a12 12 0 0 0 5.4 5.4l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.3 5.2 2 2 0 0 1 6.3 3Z"/></svg>
+            <div>
+              <h4>Telepon</h4>
+              <a data-site="kontak.teleponTampil" data-site-href-tel></a>
+            </div>
+          </div>
+
+          <div class="glass contact__card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+            <div>
+              <h4>Email</h4>
+              <a data-site="kontak.email" data-site-href-mail></a>
+            </div>
+          </div>
+
+          <div class="glass hours">
+            <h4 style="margin-bottom:var(--sp-4)">Jam Operasional</h4>
+            <div data-render="jam"></div>
+            <p class="text-subtle" style="margin-top:var(--sp-4);font-size:var(--fs-sm)" data-site="kontak.catatanJam"></p>
+          </div>
+
+        </div>
+
+        <!-- ---------- formulir ---------- -->
+        <form class="glass form" data-form-penawaran novalidate data-reveal="left">
+          <h2 style="font-size:var(--fs-xl);margin-bottom:var(--sp-5)">Permintaan Penawaran</h2>
+
+          <div class="form__grid">
+
+            <div class="field">
+              <label for="f-nama">Nama <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" id="f-nama" name="nama" type="text" required
+                     autocomplete="name" placeholder="Nama Anda">
+              <span class="field__error" data-error-for="f-nama"></span>
+            </div>
+
+            <div class="field">
+              <label for="f-telepon">Nomor WhatsApp <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" id="f-telepon" name="telepon" type="tel" required
+                     autocomplete="tel" inputmode="tel" placeholder="0812xxxxxxx">
+              <span class="field__error" data-error-for="f-telepon"></span>
+            </div>
+
+            <div class="field field--full">
+              <label for="f-layanan">Jenis Layanan</label>
+              <select class="select" id="f-layanan" name="layanan">
+                <option value="">— Pilih layanan —</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="f-asal">Kota Asal <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" id="f-asal" name="asal" type="text" required placeholder="Contoh: Jakarta">
+              <span class="field__error" data-error-for="f-asal"></span>
+            </div>
+
+            <div class="field">
+              <label for="f-tujuan">Kota Tujuan <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" id="f-tujuan" name="tujuan" type="text" required placeholder="Contoh: Surabaya">
+              <span class="field__error" data-error-for="f-tujuan"></span>
+            </div>
+
+            <div class="field">
+              <label for="f-barang">Jenis Barang</label>
+              <input class="input" id="f-barang" name="barang" type="text" placeholder="Contoh: Sparepart mesin">
+            </div>
+
+            <div class="field">
+              <label for="f-berat">Perkiraan Berat / Volume</label>
+              <input class="input" id="f-berat" name="berat" type="text" placeholder="Contoh: 2 ton / 5 kubik">
+            </div>
+
+            <div class="field field--full">
+              <label for="f-pesan">Keterangan Tambahan</label>
+              <textarea class="textarea" id="f-pesan" name="pesan"
+                        placeholder="Jadwal penjemputan, penanganan khusus, atau hal lain yang perlu kami tahu."></textarea>
+            </div>
+
+          </div>
+
+          <button class="btn btn--primary btn--lg btn--block" type="submit" style="margin-top:var(--sp-5)">
+            Kirim lewat WhatsApp
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg>
+          </button>
+
+          <p class="form__note">
+            Formulir ini tidak mengirim data ke server mana pun — isian Anda
+            hanya disusun menjadi pesan WhatsApp yang tetap Anda kendalikan.
+          </p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= LOKASI ============================= -->
+  <section class="section" id="lokasi">
+    <div class="container">
+      <div class="section-head is-center">
+        <span class="eyebrow" data-reveal="up">Lokasi</span>
+        <h2 data-reveal="up" style="--reveal-delay:.08s">Kunjungi kantor kami</h2>
+      </div>
+
+      <div class="glass map-embed" data-maps-embed data-reveal="up"></div>
+    </div>
+  </section>
+
+</main>
+
+<div data-render="footer"></div>
+<div data-render="wa"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js" defer></script>
+<script src="assets/js/site-data.js" defer></script>
+<script src="assets/js/icons.js" defer></script>
+<script src="assets/js/render.js" defer></script>
+<script src="assets/js/nav.js" defer></script>
+<script src="assets/js/motion.js" defer></script>
+<script src="assets/js/form.js" defer></script>
+</body>
+</html>

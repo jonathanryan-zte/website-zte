@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Armada — PT. Zenith Trans Ekspedisi</title>
+<meta name="description" content="Armada PT. Zenith Trans Ekspedisi: 26 unit Colt Diesel Double dan Single, lengkap dengan kapasitas, dimensi bak, dan fasilitas pool di Pondok Ranggon.">
+<meta name="theme-color" content="#0b1017">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:title" content="Armada — PT. Zenith Trans Ekspedisi">
+<meta property="og:description" content="26 unit Colt Diesel siap melayani distribusi dalam kota hingga antarprovinsi.">
+<meta property="og:image" content="assets/img/logo-zenith.png">
+
+<link rel="icon" href="assets/img/logo-mark.png" type="image/png">
+<link rel="canonical" href="armada.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,600;0,700;0,800;1,700;1,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+
+<script src="assets/js/theme.js"></script>
+</head>
+
+<body>
+<a class="skip-link" href="#konten">Lompat ke konten utama</a>
+
+<div class="aurora" aria-hidden="true">
+  <div class="aurora__blob aurora__blob--1"></div>
+  <div class="aurora__blob aurora__blob--2"></div>
+  <div class="aurora__blob aurora__blob--3"></div>
+  <div class="aurora__grid"></div>
+</div>
+
+<div data-render="nav"></div>
+
+<main id="konten">
+
+  <header class="page-head container">
+    <span class="eyebrow" data-reveal="up">Armada Kami</span>
+    <h1 data-reveal="up" style="--reveal-delay:.08s">
+      Kendaraan yang <span class="text-gradient">sesuai muatan</span>
+    </h1>
+    <p class="lead" data-reveal="up" style="--reveal-delay:.16s">
+      26 unit Colt Diesel yang dirawat berkala di pool sendiri dan diperiksa
+      sebelum setiap keberangkatan.
+    </p>
+  </header>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="chips" data-render="armadaFilter" role="group" aria-label="Saring kategori armada"></div>
+      <div class="grid grid-2 container-narrow" data-render="armada" data-armada-grid
+           style="padding-inline:0"></div>
+
+      <p class="form__note" data-armada-kosong hidden>
+        Tidak ada armada pada kategori ini.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================= POOL & FASILITAS ============================= -->
+  <section class="section" id="pool">
+    <div class="container">
+      <div class="section-head is-center">
+        <span class="eyebrow" data-reveal="up">Pool &amp; Fasilitas</span>
+        <h2 data-reveal="up" style="--reveal-delay:.08s">
+          Armada kami pulang ke <span class="text-gradient">rumahnya sendiri</span>
+        </h2>
+        <p class="lead" data-reveal="up" style="--reveal-delay:.16s">
+          Pool kami di <span data-site="pool.lokasi"></span> dilengkapi area
+          perawatan, gudang, dan tempat istirahat pengemudi — supaya setiap unit
+          berangkat dalam kondisi terbaik.
+        </p>
+      </div>
+
+      <div class="benefits" data-render="poolFasilitas"></div>
+    </div>
+  </section>
+
+  <!-- ============================= KEUNGGULAN ============================= -->
+  <section class="section" id="perawatan">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-reveal="up">Standar Kami</span>
+        <h2 data-reveal="up" style="--reveal-delay:.08s">Armada siap jalan, setiap hari</h2>
+      </div>
+      <div class="benefits" data-render="keunggulan"></div>
+    </div>
+  </section>
+
+  <!-- ============================= AJAKAN ============================= -->
+  <section class="section">
+    <div class="container">
+      <div class="cta" data-reveal="scale">
+        <div class="cta__inner">
+          <h2>Belum yakin armada mana yang cocok?</h2>
+          <p>Sampaikan jenis dan volume muatan Anda, kami bantu tentukan pilihannya.</p>
+          <div class="cluster cta__actions">
+            <a class="btn btn--lg cta__btn magnetic" data-wa="Halo, saya ingin konsultasi memilih armada untuk muatan saya.">
+              Konsultasi via WhatsApp
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="kontak.html">Isi Formulir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-render="footer"></div>
+<div data-render="wa"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js" defer></script>
+<script src="assets/js/site-data.js" defer></script>
+<script src="assets/js/icons.js" defer></script>
+<script src="assets/js/render.js" defer></script>
+<script src="assets/js/nav.js" defer></script>
+<script src="assets/js/motion.js" defer></script>
+<script src="assets/js/armada.js" defer></script>
+</body>
+</html>

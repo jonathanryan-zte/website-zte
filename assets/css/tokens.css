@@ -1,0 +1,299 @@
+/* ============================================================
+   ZENITH TRANS EKSPEDISI — DESIGN TOKENS
+   Sumber tunggal untuk warna, jarak, tipografi, dan efek.
+   Ubah nilai di sini, seluruh website ikut berubah.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. WARNA BRAND (tetap, tidak berubah antar mode)
+   ------------------------------------------------------------ */
+:root {
+  /* Warna mentah dari brand guide */
+  --brand-green: #00ff66;
+  --brand-blue: #00b8ff;
+  --brand-ink: #101828;
+
+  /* Turunan hijau — dipakai saat butuh kontras di latar terang */
+  --green-300: #4dffa0;
+  --green-400: #00ff66;
+  --green-500: #00cc52;
+  --green-600: #00803f; /* teks hijau di latar terang — terverifikasi 4.79:1 */
+  --green-700: #00713a; /* state hover-nya */
+
+  /* Turunan biru */
+  --blue-300: #5cd0ff;
+  --blue-400: #00b8ff;
+  --blue-500: #0095d6;
+  --blue-600: #0077b3; /* teks biru di latar terang — terverifikasi 4.64:1,
+                          juga aman sebagai isian dengan teks putih (4.90:1) */
+  --blue-700: #005c8a;
+
+  /* Netral */
+  --ink-950: #070b10;
+  --ink-900: #0b1017;
+  --ink-850: #0e141d;
+  --ink-800: #101828;
+  --ink-700: #1e252b;
+  --ink-600: #334155;
+  --ink-500: #475569;
+  --ink-450: #5b6a80; /* teks redup di latar terang */
+  --ink-400: #64748b;
+  --ink-350: #7688a0; /* teks redup di latar gelap */
+  --ink-300: #94a3b8;
+  --ink-200: #cbd5e1;
+  --ink-100: #e2e8f0;
+  --ink-50: #f1f5f9;
+  --paper: #f7f9fc;
+  --white: #ffffff;
+
+  /* Gradient brand — MOMEN BRAND SAJA.
+     Maksimal 1-2 elemen per halaman: logo, hero, satu panel CTA.
+     Jangan dipakai sebagai dekorasi umum. */
+  --gradient-brand: linear-gradient(115deg, var(--blue-400) 0%, var(--green-400) 100%);
+  --gradient-brand-soft: linear-gradient(115deg, var(--blue-400) 0%, var(--green-400) 140%);
+  --gradient-route: linear-gradient(90deg, var(--blue-400) 0%, var(--green-400) 100%);
+
+  /* Gradient untuk TEKS. Berbeda dari --gradient-brand karena hijau neon
+     di atas latar terang hanya berkontras 1.4:1. Nilainya dipilih ulang
+     di tiap mode di bawah. */
+  --gradient-text: linear-gradient(100deg, var(--blue-400) 0%, var(--green-400) 100%);
+
+  /* Status */
+  --danger: #ef4444;
+  --warning: #f59e0b;
+}
+
+/* ------------------------------------------------------------
+   2. MODE GELAP (default)
+   Hijau & biru murni aman dipakai langsung sebagai teks di sini.
+   ------------------------------------------------------------ */
+:root,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: var(--ink-900);
+  --bg-elev: var(--ink-800);
+  --bg-sunken: var(--ink-950);
+
+  --text: #f8fafc;
+  --text-muted: var(--ink-300);
+  --text-subtle: var(--ink-350);
+  --text-inverse: var(--ink-900);
+
+  /* Aksen sebagai TEKS — kontras terhadap --bg */
+  --accent: var(--green-400);
+  --accent-2: var(--blue-400);
+  --accent-hover: var(--green-300);
+
+  /* Aksen sebagai ISIAN (background) — teks di atasnya pakai --on-accent */
+  --accent-fill: var(--green-400);
+  --accent-fill-hover: var(--green-300);
+  --accent-2-fill: var(--blue-400);
+  --on-accent: var(--ink-900);
+
+  /* Glass */
+  --glass-bg: rgba(255, 255, 255, 0.055);
+  --glass-bg-strong: rgba(255, 255, 255, 0.085);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-border-top: rgba(255, 255, 255, 0.22);
+  --glass-highlight: rgba(255, 255, 255, 0.06);
+
+  /* Garis & pembatas */
+  --border: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.18);
+
+  /* Bayangan — lembut dan besar, tidak pernah tajam */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 24px 70px rgba(0, 0, 0, 0.55);
+  --shadow-glow-green: 0 0 40px rgba(0, 255, 102, 0.22);
+  --shadow-glow-blue: 0 0 40px rgba(0, 184, 255, 0.22);
+
+  /* Aurora latar — memberi sesuatu untuk di-blur oleh glass */
+  --gradient-text: linear-gradient(100deg, var(--blue-400) 0%, var(--green-400) 100%);
+
+  --aurora-1: rgba(0, 255, 102, 0.16);
+  --aurora-2: rgba(0, 184, 255, 0.16);
+  --aurora-3: rgba(0, 184, 255, 0.07);
+  --grid-line: rgba(255, 255, 255, 0.032);
+}
+
+/* ------------------------------------------------------------
+   3. MODE TERANG
+   BUKAN kebalikan mode gelap — punya resep sendiri.
+   #00FF66 di atas putih hanya berkontras 1.4:1, jadi sebagai
+   TEKS kita turunkan luminansinya. Hijau neon murni tetap hidup,
+   tapi hanya sebagai ISIAN tombol dengan teks gelap di atasnya.
+   ------------------------------------------------------------ */
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: var(--paper);
+  --bg-elev: var(--white);
+  --bg-sunken: var(--ink-50);
+
+  --text: var(--ink-800);
+  --text-muted: var(--ink-500);
+  --text-subtle: var(--ink-450);
+  --text-inverse: var(--white);
+
+  --accent: var(--green-600);
+  --accent-2: var(--blue-600);
+  --accent-hover: var(--green-700);
+
+  /* Neon tetap dipakai di sini — sebagai isian, bukan teks */
+  --accent-fill: var(--green-400);
+  --accent-fill-hover: var(--green-500);
+  --accent-2-fill: var(--blue-600);
+  --on-accent: var(--ink-800);
+
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-bg-strong: rgba(255, 255, 255, 0.86);
+  --glass-border: rgba(16, 24, 40, 0.1);
+  --glass-border-top: rgba(255, 255, 255, 0.9);
+  --glass-highlight: rgba(255, 255, 255, 0.6);
+
+  --border: rgba(16, 24, 40, 0.1);
+  --border-strong: rgba(16, 24, 40, 0.16);
+
+  --shadow-sm: 0 2px 8px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0 10px 34px rgba(16, 24, 40, 0.09);
+  --shadow-lg: 0 26px 70px rgba(16, 24, 40, 0.13);
+  --shadow-glow-green: 0 10px 34px rgba(0, 200, 82, 0.28);
+  --shadow-glow-blue: 0 10px 34px rgba(0, 149, 214, 0.26);
+
+  --gradient-text: linear-gradient(100deg, var(--blue-600) 0%, var(--green-600) 100%);
+
+  --aurora-1: rgba(0, 214, 108, 0.1);
+  --aurora-2: rgba(0, 184, 255, 0.1);
+  --aurora-3: rgba(0, 184, 255, 0.05);
+  --grid-line: rgba(16, 24, 40, 0.04);
+}
+
+/* Mengikuti preferensi sistem saat pengunjung belum memilih mode */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    color-scheme: light;
+
+    --bg: var(--paper);
+    --bg-elev: var(--white);
+    --bg-sunken: var(--ink-50);
+
+    --text: var(--ink-800);
+    --text-muted: var(--ink-500);
+    --text-subtle: var(--ink-450);
+    --text-inverse: var(--white);
+
+    --accent: var(--green-600);
+    --accent-2: var(--blue-600);
+    --accent-hover: var(--green-700);
+
+    --accent-fill: var(--green-400);
+    --accent-fill-hover: var(--green-500);
+    --accent-2-fill: var(--blue-600);
+    --on-accent: var(--ink-800);
+
+    --glass-bg: rgba(255, 255, 255, 0.72);
+    --glass-bg-strong: rgba(255, 255, 255, 0.86);
+    --glass-border: rgba(16, 24, 40, 0.1);
+    --glass-border-top: rgba(255, 255, 255, 0.9);
+    --glass-highlight: rgba(255, 255, 255, 0.6);
+
+    --border: rgba(16, 24, 40, 0.1);
+    --border-strong: rgba(16, 24, 40, 0.16);
+
+    --shadow-sm: 0 2px 8px rgba(16, 24, 40, 0.06);
+    --shadow-md: 0 10px 34px rgba(16, 24, 40, 0.09);
+    --shadow-lg: 0 26px 70px rgba(16, 24, 40, 0.13);
+    --shadow-glow-green: 0 10px 34px rgba(0, 200, 82, 0.28);
+    --shadow-glow-blue: 0 10px 34px rgba(0, 149, 214, 0.26);
+
+    --gradient-text: linear-gradient(100deg, var(--blue-600) 0%, var(--green-600) 100%);
+
+    --aurora-1: rgba(0, 214, 108, 0.1);
+    --aurora-2: rgba(0, 184, 255, 0.1);
+    --aurora-3: rgba(0, 184, 255, 0.05);
+    --grid-line: rgba(16, 24, 40, 0.04);
+  }
+}
+
+/* ------------------------------------------------------------
+   4. TIPOGRAFI
+   Exo 2 mengikuti wordmark logo. Plus Jakarta Sans untuk isi —
+   geometrik, dan sangat terbaca untuk Bahasa Indonesia.
+   ------------------------------------------------------------ */
+:root {
+  --font-display: 'Exo 2', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'SF Mono', ui-monospace, 'Cascadia Code', Menlo, monospace;
+
+  /* Skala fluid — ikut lebar layar tanpa media query */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: clamp(1.0625rem, 0.25vw + 1rem, 1.125rem);
+  --fs-lg: clamp(1.25rem, 0.5vw + 1.1rem, 1.5rem);
+  --fs-xl: clamp(1.5rem, 1vw + 1.25rem, 2rem);
+  --fs-2xl: clamp(1.875rem, 2vw + 1.4rem, 2.75rem);
+  --fs-3xl: clamp(2.25rem, 3.2vw + 1.5rem, 4rem);
+  --fs-4xl: clamp(2.75rem, 5.5vw + 1.2rem, 6rem);
+
+  --lh-tight: 1.05;
+  --lh-snug: 1.25;
+  --lh-normal: 1.6;
+  --lh-relaxed: 1.75;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-widest: 0.16em;
+}
+
+/* ------------------------------------------------------------
+   5. JARAK, RADIUS, LAYOUT
+   ------------------------------------------------------------ */
+:root {
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+
+  --section-y: clamp(4rem, 9vw, 8rem);
+  --container: 1240px;
+  --container-narrow: 880px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-full: 999px;
+
+  --blur-glass: 20px;
+  --blur-glass-strong: 40px;
+  --saturate-glass: 180%;
+
+  --nav-h: 76px;
+  --nav-h-scrolled: 62px;
+
+  /* Kurva gerak — ease-out yang tegas, khas antarmuka Apple */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 0.18s;
+  --dur-base: 0.32s;
+  --dur-slow: 0.6s;
+  --dur-slower: 1.1s;
+
+  --z-aurora: 0;
+  --z-content: 1;
+  --z-nav: 100;
+  --z-float: 200;
+  --z-modal: 300;
+}
